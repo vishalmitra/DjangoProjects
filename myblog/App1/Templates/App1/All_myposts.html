@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} MY BLOG   Welcome to my blog{% endblock %}
+
+{% block css_style %}
+<link rel="stylesheet" href="{% static 'App1\all-posts.css' %}">
+{% endblock %}
+
+{% block body %}
+<section id ="all-posts">
+    <h2> all my posts </h2>
+
+    <ul>
+
+            <article>
+                           {% include "App1/include/post.html" %}
+                           {% include "App1/include/post.html" %}
+                           {% include "App1/include/post.html" %}
+                            {% include "App1/include/post.html" %}
+                           {% include "App1/include/post.html" %}
+                           {% include "App1/include/post.html" %}
+            </article>
+
+    </ul>
+</section>
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} MY BLOG   Welcome to my blog{% endblock %}
+
+{% block css_style %}
+<link rel="stylesheet" href="{% static 'App1\index.css' %}">
+{% endblock %}
+
+
+{% block body %}
+<header  id="main-navigation">
+    <h1><a href="">Mitra Blog  </a></h1>
+    <nav>
+        <a href=""> All posts  </a>
+    </nav>
+</header>
+    <section id="welcome">
+    <header>
+        <img  src="{% static 'App1\images\Max.jpg' %}" alt="Author of the blog"/>
+        <h2>Mitra's </h2>
+    </header>
+        <p> Hi, Iam Mitra i have to blog about tech and the world!</p>
+    </section>
+
+
+    <section id="latest-posts">
+        <h2> My latest Throughts</h2>
+
+        <ul>
+            {% include "App1/include/post.html" %}
+        </ul>
+    </section>
+
+
+    <section id="about">
+        <h2>
+             WHAT I DO
+             <p>
+             My goal is to keep growing as developer - and i enjoying exploring new technologies
+            </p>
+        </h2>
+
+    </section>
+
+
+{% endblock %}
+

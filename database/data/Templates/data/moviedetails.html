@@ -1,0 +1,19 @@
+{% extends "data/Base.html" %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block bodycontent %}
+  <h1> {{ title}} </h1>
+  <h2> {{ rating}} </h2>
+  <p> {{ director }} form imdb and book my show
+
+
+  {% if  verdict %}
+      consider watching
+  {% else %}
+      time waste movie
+   {% endif %}
+ </p>
+{% endblock %}

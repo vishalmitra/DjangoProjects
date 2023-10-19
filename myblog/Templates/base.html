@@ -1,0 +1,26 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  {% block title %}  {% endblock %} </title>
+     <link rel="stylesheet" href="{% static 'app.css' %}">
+    {% block css_style %}  {% endblock %}
+
+
+</head>
+<body>
+{% block body %}
+<header  id="main-navigation">
+    <h1><a href="">Mitra Blog  </a></h1>
+    <nav>
+        <a href=""> All posts  </a>
+    </nav>
+</header>
+
+{% endblock %}
+</body>
+</html>
+

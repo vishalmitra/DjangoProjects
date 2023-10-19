@@ -1,0 +1,16 @@
+{% extends 'data/Base.html' %}
+
+{% block title %}
+All Movies
+{% endblock %}
+
+{% block bodycontent %}
+    <ul >
+
+        {% for i in movies %}
+        <!-- <li> <a href='{% url "moviedetailspage" i.id  %}'> {{i.title}} </a>  (result_hit: {{i.title}} {{ i.verdict }} ) </li> -->
+        <li> <a href="{{ i.get_absolute_url }}"> {{i.title}} </a>  (result_hit: {{i.title}} {{ i.verdict }} directed by {{ i.director}} ) </li>
+        {% endfor %}
+
+    </ul>
+{% endblock %}
