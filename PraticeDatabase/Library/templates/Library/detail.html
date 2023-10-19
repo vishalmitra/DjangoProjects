@@ -1,0 +1,31 @@
+{%  extends "Library/base.html" %}
+
+{% block title %}
+
+deatail_view page 
+
+{% endblock %}
+
+
+{% block body %}
+<h1> control checks  here iam fetching the data from the model books where i have not taken from forms.model</h1>
+<h2> its normal model  and it has only two data rows only inserted </h2>
+<h3> testing purpose </h3>
+<!-- here hence its detail view rather use "object".coloumn name to show data -->
+
+<p> book name is -----> {{ object.title }}</p>
+  <p> author name is ----> {{ object.author}} </p>
+   <p> number of copies sold ---->  {{ object.copies_sold }} </p>
+   <form  action = "favorite"  method='post' >
+    {%  csrf_token %}
+    <input type="hidden"  name="hidden_id" value="{{ model_key.id}}"  > 
+    
+
+    <button type = submit>  favorite   </button>
+   </form>
+
+
+{% endblock %}
+
+
+ 

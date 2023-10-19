@@ -1,0 +1,22 @@
+{%  extends "Library/base.html" %}
+
+{% block title %}
+
+single review page
+
+{% endblock %}
+
+
+{% block body %}
+<h1> control checks  here iam fetching the data from the model books where i have not taken from forms.model</h1>
+<h2> its normal model  and it has only two data rows only inserted </h2>
+<p  >book name is -----> {{ model_key.title }}</p>
+  <p> author name is ----> {{ model_key.author }} </p>
+   <p> number of copies sold ---->  {{ model_key.copies_sold }} </p>
+   
+
+
+{% endblock %}
+
+
+ 

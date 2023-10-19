@@ -1,0 +1,83 @@
+{% extends  "Library/base.html" %}
+{% load static %}
+
+{% block title  %}
+   Home Form
+{% endblock %}
+
+{% block body %}
+<h1> Forms practice</h1>
+
+    <section>
+
+        <form    method="post" >
+              {% csrf_token %}
+              
+              {{form.as_p}}
+
+
+
+
+
+
+
+        <!--
+
+        <p>
+
+  {% if wrong == True %}
+    <b> not allowed digits in user name </b>
+
+    {% endif %}
+
+    </b>
+
+
+
+              {{form.password }}
+              {{form.email }}
+              {{form.gender}}
+
+        {{ form.as_div }} will render them wrapped in <div> tags.
+        {{ form.as_table }} will render them as table cells wrapped in <tr> tags.
+        {{ form.as_p }} will render them wrapped in <p> tags.
+        {{ form.as_ul }} will render them wrapped in <li> tags.
+            <div>
+                <label for ="user_name">username </label>
+                <input  placeholder="username" type = 'text' name ='user_name'>
+            </div>
+
+
+            <div>
+                <label for = 'password'> password</label>
+                <input  style="color: brown;"  placeholder="password" type = 'password' name = "password">
+
+            </div>
+
+            <div>
+                <label for = 'radio'> radio</label>
+                <input type = 'radio' name = "radio">
+
+            </div>
+        <div>
+            <label for = 'checkbox'> checkbox</label>
+           <input type = 'checkbox'  name = "checkbox">
+
+        </div>
+
+        <div>
+            <label for = 'reset'> password</label>
+            <input type = 'reset' name = "checkbox">
+
+        </div>
+            -->
+
+        <button  type="submit" >  submit </button>
+    </form>
+
+    </section>
+
+
+
+{% endblock %}
+</html>

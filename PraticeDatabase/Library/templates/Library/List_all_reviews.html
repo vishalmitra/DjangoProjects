@@ -1,0 +1,39 @@
+{%  extends 'Library/base.html'  %}
+
+{% block title %}
+List of reviews
+{%  endblock %}
+
+{% block body %}
+<h1> HYYY... there   this all the is reviews </h1>
+
+    <ul>
+        <!-- here the model_key is the key of the dictionary not the dictionary if
+        
+        -->
+
+        <!-- incase of the Listview class from django.views.generic  import Listview
+        key of the dictionary is not used to iterate  "object_list"  id used to static inbuit 
+        term in replaced in the position of key of dictionary where we use for the Tempalate view
+
+        # we use context_object_name proterty to use the defaut name that we like to iterate in the html
+        # page instead of using object_list
+        context_object_name = "Total_books"  otherwise we keep object_list to as static iterable variable
+        
+        -->
+    {% for review_iter in Total_books %}
+
+        <ul>
+            <li>
+                {{ review_iter.username}} ( the review is:-------- {{review_iter.review}})
+                (their email is {{review_iter.email}})      
+            </li>
+        </ul>
+
+    {% endfor %}
+
+    </ul>
+
+
+
+{%  endblock   %}
